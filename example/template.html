@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+      }
+      body {
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        font-size: 1.05rem;
+        color: #282c34;
+      }
+      p {
+        line-height: 2;
+      }
+      .container {
+        padding: 20px 1rem 0;
+      }
+      @media screen and (min-width: 800px) {
+        .container {
+          width: 650px;
+          margin: 0 auto;
+        }
+      }
+      ol {
+        margin-left: 50px;
+      }
+      li {
+        padding: 5px 0;
+      }
+      h1.title {
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        margin: 20px 0;
+        background-color: #f1f1f1;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+      }
+      @media screen and (min-width: 600px) {
+        h1.title {
+          font-size: 1.5rem;
+        }
+      }
+      .v-code {
+        background-color: #009688;
+        width: fit-content;
+        margin: 20px auto;
+        padding: 15px 30px;
+        font-size: 2rem;
+        font-family: arial, sans-serif;
+        color: #ffffff;
+      }
+      a {
+        text-decoration: none;
+        color: #0277bd;
+        transition: 0.3s;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        background-color: #f1f1f1;
+        font-size: 0.8rem;
+        text-align: center;
+        color: #9e9e99;
+        padding: 30px 50px;
+        margin: 15px 0;
+      }
+      .bold {
+        font-family: arial;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Please verify your email address</h1>
+      <p>Dear <span class="bold">${ name }</span></p>
+      <p>
+        Thank you for creating an account. In order to complete your
+        registration you must:
+      </p>
+      <ol>
+        <li>Take the One-time Verification show below</li>
+        <li>
+          Return back to the email verification page that should still be open
+          in your browser. If you closed the email verification page, go to
+          login page, enter your credentials, there will redirect you to the
+          email verification page
+        </li>
+        <li>
+          Enter the code below in Verification Code field and click verify
+          button to activate your account
+        </li>
+      </ol>
+      <p class="v-code">
+        ${ verificationCode }
+      </p>
+      <p>
+        <span class="bold">Please note:</span> The code above will expire in 20
+        minutes. If you are unable to verify your e-mail address before that
+        time, you will need to click resend verification code button to get the
+        new One-Time Verification code.
+      </p>
+      <div class="footer">
+        <p>
+          This is an auto-reply to individuals who have requested this
+          notification service. Please do not reply to this e-mail message.
+        </p>
+        <a class="footer-link" href="https://oldkora.co.za">oldkora.co.za</a>
+      </div>
+    </div>
+  </body>
+</html>
